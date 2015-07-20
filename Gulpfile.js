@@ -3,11 +3,11 @@ var browsersync = require('browser-sync')
 
 gulp.task('serve', function () {
 	browsersync.init({
-		notify: false
-	,	port: 8888
-	,	server: {
-			baseDir: ['app']
-		,	routes: {
+		notify: false,	
+		port: 8888,	
+		server: {
+			baseDir: ['app'],	
+			routes: {
 				'/bower_components': 'bower_components'
 			}
 		}
@@ -32,4 +32,3 @@ gulp.task('serve-test', function () {
 	gulp.watch(['app/**/*.*'])
 		.on('change', browsersync.reload);
 })
-
